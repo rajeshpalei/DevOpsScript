@@ -33,10 +33,10 @@ mv apache-tomcat-11.0.13  tomcat
 sed -i '56 a/<role rolename="manager-gui"/>' /home/ec2-user/tomcat/conf/tomcat-users.xml
 sed -i '57 a/<role rolename="manager-script"/>' /home/ec2-user/tomcat/conf/tomcat-users.xml
 sed -i '58 a/<user username="tomcat" password="root123" roles="manager-gui,manager-script"/>' /home/ec2-user/tomcat/conf/tomcat-users.xml
+sed -i '59  a\</tomcat-users>' /home/ec2-user/tomcat/conf/tomcat-users.xml
 sed -i '56d' /home/ec2-user/tomcat/conf/tomcat-users.xml
 
 # Deleting the line at webapps/manager/META-INF
-
 sed -i '21d' /home/ec2-user/tomcat/webapps/manager/META-INF/context.xml
 sed -i '22d' /home/ec2-user/tomcat/webapps/manager/META-INF/context.xml
 
