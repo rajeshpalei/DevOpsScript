@@ -1,6 +1,6 @@
 #!/bin/bash
 # Installing the JAVA 17
-dnf install java-17-amazon-corretto -y
+sudo dnf install java-17-amazon-corretto -y
 
 # Check if wget is installed
 if ! command -v wget &> /dev/null
